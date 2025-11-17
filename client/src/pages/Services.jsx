@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowCircleRight } from "phosphor-react";
 import partitionWall from "../assets/imgs/office-partition.jpg";
 import gypsum from "../assets/imgs/modern-gypsum.jpg";
-import interior from "../assets/imgs/prjts1.png";
+import interior from "../assets/imgs/prjts1.PNG";
 
 const Services = () => {
   const services = [
