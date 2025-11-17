@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <>
       <StartProjectCTA />
-      <section className="relative bg-primary-500 text-surface-500 pt-10 md:pt-18 pb-10 border-t border-border-500/30">
+      <section className="relative w-full overflow-hidden bg-primary-500 text-surface-500 pt-10 md:pt-18 pb-10 border-t border-border-500/30">
         <div className="container relative mx-auto px-6 md:px-12 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -85,8 +85,11 @@ const Footer = () => {
                 Get In Touch
               </h4>
               <ul className="space-y-3">
-                <li className="flex items-center gap-2">
-                  <Envelope size={18} /> abdulkarimceilinganddecor@gmail.com
+                <li className="flex gap-2">
+                  <Envelope size={18} />
+                  <span className="break-all">
+                    abdulkarimceilinganddecor@gmail.com
+                  </span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone size={18} /> +234 8035843896
