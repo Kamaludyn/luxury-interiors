@@ -10,4 +10,7 @@ export default defineConfig({
     port: 9493,
   },
   base: "/luxury-interiors/",
+  build: {
+    outDir: "dist",
+  },
 });
