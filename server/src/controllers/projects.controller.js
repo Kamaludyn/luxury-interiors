@@ -21,11 +21,16 @@ const addProject = asyncHandler(async (req, res, next) => {
       });
     }
 
-    // Upload provided poster Image
-    if (req.files?.posterImage) {
-      const file = req.files.posterImage[0];
-      uploadedPoster = await uploadToCloudinary(file.path);
+    if (!req.files.posterImage) {
+      return res.status(400).json({
+        success: false,
+        message: "Poster image is required!",
+      });
     }
+
+    // Upload provided poster Image
+    const file = req.files.posterImage[0];
+    uploadedPoster = await uploadToCloudinary(file.path);
 
     // Upload all provided gallery images
     if (req.files?.galleryImages) {
