@@ -5,7 +5,15 @@ import { upload } from "../middleware/upload.middleware.js";
 
 const router = express.Router();
 
-// *** All routes are Private *** //
+// *** Public Routes *** //
+
+// @route  GET /api/project?page&limit
+router.get("/", projectController.getAllProjects);
+
+// @route  GET /api/project/:id
+router.get("/:projectId", projectController.getProjectById);
+
+// *** Private Routes *** //
 router.use(verify);
 
 // @route  POST /api/project
@@ -17,12 +25,6 @@ router.post(
   ]),
   projectController.addProject
 );
-
-// @route  GET /api/project?page&limit
-router.get("/", projectController.getAllProjects);
-
-// @route  GET /api/project/:id
-router.get("/:projectId", projectController.getProjectById);
 
 // @route  PATCH /api/project/:id
 router.patch(
