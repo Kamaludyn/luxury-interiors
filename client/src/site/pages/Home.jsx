@@ -6,13 +6,15 @@ import Mail from "../components/ui/Mail";
 
 const Home = () => {
   return (
-    <main>
-      <Hero />
-      <Services />
-      <AboutUs />
-      <LatestProjects />
+    <>
+      <main>
+        <Hero />
+        <Services />
+        <AboutUs />
+        <LatestProjects />
+      </main>
       <Mail />
-    </main>
+    </>
   );
 };
 

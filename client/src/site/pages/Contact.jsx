@@ -113,9 +113,12 @@ const Contact = () => {
               </div>
               <label className="text-surface-500/80 py-1">Your Message *</label>
               <textarea className="bg-surface-500 w-full p-2 mb-4 border-2 border-transparent focus:border-primary-600 outline-0 text-primary-500 rounded-md" />
-              <button className="bg-primary-500 px-4 py-2 text-surface-500 hover:bg-primary-600 rounded-md ml-auto cursor-pointer">
+              <a
+                href="mailto:abdulkarimceilinganddecor@gmail.com?subject=Request%20a%20Quote"
+                className="bg-primary-500 px-4 py-2 text-surface-500 hover:bg-primary-600 rounded-md ml-auto cursor-pointer"
+              >
                 Request a Quote
-              </button>
+              </a>
             </form>
           </div>
           {/* Business Location Map */}

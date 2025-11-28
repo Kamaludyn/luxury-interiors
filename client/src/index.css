@@ -63,29 +63,14 @@ body {
   --color-success-500: #16a34a;
   --color-danger-500: #dc2626;
 
+  /* Socials */
+  --color-facebook-500: #1877F2;
+  --color-whatsapp-500: #25d366;
+  --color-instagram-500: #E1306C;
+  
   /* Typography */
   --font-heading: "Cormorant Garamond", serif;
   --font-body: "Poppins", sans-serif;
-}
-
-/*───────────────────────────────────────────────
-  Dark Theme — Cinematic & Modern Feel
-───────────────────────────────────────────────*/
-@theme {
-  --color-background-800: #0e1019; /* rich dark navy tone */
-  --color-surface-800: #1a1c26;
-  --color-surface-900: #11131b;
-
-  --color-text-700: #f5f5f5;
-  --color-text-600: #c7c7c7;
-
-  --color-border-800: #2b2d36;
-
-  --color-primary-800: #2b3672;
-  --color-accent-800: #d6c8a6;
-
-  --color-success-800: #22c55e;
-  --color-danger-800: #ef4444;
 }
 
 /*───────────────────────────────────────────────
@@ -109,9 +94,9 @@ body {
     font-family: var(--font-body);
   }
 
-  section {
+  /* section {
     padding-block: 6rem;
-  }
+  } */
 }
 
 .clip-ellipse-top {
@@ -147,4 +132,49 @@ body {
 
 .animate-slideReveal {
   animation: slideReveal 0.6s ease-out forwards;
+}
+
+.color {
+  --color-primary-500: #2c313b;
+  --color-primary-600: #8da8ed;
+
+  --color-secondary-500: #c6d8ff;
+
+  --color-accent-500: #ede2c7; /* soft beige */
+  --color-accent-600: #d9c9a3;
+
+  /* Background & Surface */
+  --color-background-500: #ffffff;
+  --color-surface-500: #faf9f6;
+  --color-surface-600: #f2f1ee;
+
+  /* Text System */
+  --color-text-500: #1a1a1a;
+  --color-text-400: #5a5a5a;
+
+  /* Borders */
+  --color-border-500: #e5e5e5;
+
+  /* Status Colors */
+  --color-success-500: #16a34a;
+  --color-danger-500: #dc2626;
+
+  /* Typography */
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Poppins", sans-serif;
+
+  --color-background-800: #0e1019; /* rich dark navy tone */
+  --color-surface-800: #1a1c26;
+  --color-surface-900: #11131b;
+
+  --color-text-700: #f5f5f5;
+  --color-text-600: #c7c7c7;
+
+  --color-border-800: #2b2d36;
+
+  --color-primary-800: #2b3672;
+  --color-accent-800: #d6c8a6;
+
+  --color-success-800: #22c55e;
+  --color-danger-800: #ef4444;
 }

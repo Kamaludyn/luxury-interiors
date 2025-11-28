@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import hero from "../../assets/imgs/hero.jpg";
+import hero from "../../../assets/imgs/hero.jpg";
 
 const Hero = () => {
   const ref = useRef(null);
@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background-500 text-text-500"
+      className="relative min-h-screen py-24 flex items-center justify-center overflow-hidden bg-background-500 text-text-500"
     >
       <motion.div style={{ y }} className="absolute inset-0 z-0">
         <img

@@ -1,12 +1,20 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RootLayout from "./layouts/RootLayout";
-import Home from "./pages/Home";
-import Services from "./pages/Services";
-import Projects from "./pages/Projects";
-import ProjectDetails from "./pages/ProjectDetails";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
+import { AuthProvider } from "./shared/context/AuthContext";
+import RootLayout from "./site/layouts/RootLayout";
+import AdminLayout from "./admin/layouts/AdminLayout";
+import Login from "./admin/pages/Login";
+import Home from "./site/pages/Home";
+import DashboardHome from "./admin/pages/Home";
+import Services from "./site/pages/Services";
+import Projects from "./site/pages/Projects";
+import ProjectDetails from "./site/pages/ProjectDetails";
+import About from "./site/pages/About";
+import Contact from "./site/pages/Contact";
+import DashboardProjects from "./admin/pages/Projects";
+import AdminProfile from "./admin/pages/Profile";
+import AdminProfileSettings from "./admin/pages/ProfileSettings";
+import ResetPassword from "./admin/pages/ResetPassword";
+import NotFound from "./site/pages/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -40,13 +48,48 @@ const router = createBrowserRouter([
     ],
   },
   {
+    path: "/dashboard",
+    element: <AdminLayout />,
+    children: [
+      {
+        path: "",
+        index: true,
+        element: <DashboardHome />,
+      },
+      {
+        path: "projects",
+        element: <DashboardProjects />,
+      },
+      {
+        path: "profile",
+        element: <AdminProfile />,
+      },
+      {
+        path: "profile-settings",
+        element: <AdminProfileSettings />,
+      },
+    ],
+  },
+  {
+    path: "login",
+    element: <Login />,
+  },
+  {
+    path: "reset-password/:token",
+    element: <ResetPassword />,
+  },
+  {
     path: "*",
     element: <NotFound />,
   },
 ]);
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  );
 };
 
 export default App;

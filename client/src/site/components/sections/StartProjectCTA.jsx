@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "phosphor-react";
 
 const StartProjectCTA = () => {
+  const Motionlink = motion.create(Link)
   return (
     <section className="relative w-full py-6 bg-primary-600">
       <div className="container mx-auto relative flex flex-col md:flex-row justify-center items-center gap-4 px-6">
@@ -20,15 +22,15 @@ const StartProjectCTA = () => {
             precision, passion, and purpose.
           </p>
         </motion.div>
-        <motion.a
-          href="/contact"
+        <Motionlink
+          to="/contact-us"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
           className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-500 font-medium rounded-full shadow-sm hover:bg-white/90 transition-all duration-300"
         >
           Contact Us
           <ArrowRight size={20} weight="bold" />
-        </motion.a>
+        </Motionlink>
       </div>
     </section>
   );

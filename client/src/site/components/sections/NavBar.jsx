@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import {
   List,
   Phone,
@@ -73,7 +73,7 @@ const Navbar = () => {
                 </div>
                 <div className="text-sm">
                   <p className="text-text-400 italic">Phone number:</p>
-                  <p className="font-semibold text-primary-500 group-hover:text-primary-600">
+                  <p href="tel:+2348035843896" className="font-semibold text-primary-500 group-hover:text-primary-600">
                     +234 803 5843 896
                   </p>
                 </div>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 <div className="text-sm">
                   <p className="text-text-400 italic">Address:</p>
                   <p className="font-semibold text-primary-500 group-hover:text-primary-600">
-                    1738, Gudu, Abuja
+                    Gudu, Abuja
                   </p>
                 </div>
               </div>
@@ -111,9 +111,9 @@ const Navbar = () => {
                   className="absolute left-6 flex flex-col items-center gap-2 px-1 md:w-[20%]"
                 >
                   <div className="absolute top-3 inset-x-5 bg-primary-600/20 h-10 w-[80%] " />
-                  <div className="flex items-center justify-center leading-4 px-1 border-2 border-primary-500 text-primary-500 font-bold text-lg">
+                  <Link to='/' className="flex items-center justify-center leading-4 px-1 border-2 border-primary-500 text-primary-500 font-bold text-lg">
                     AC<span className="text-sm">&</span>D
-                  </div>
+                  </Link>
                   <div className="text-center">
                     <h2 className="text-base md:text-xs font-black md:font-semibold tracking-wide">
                       ABDULKARIM
@@ -148,22 +148,29 @@ const Navbar = () => {
 
               <div className="hidden md:flex items-center gap-4 md:gap-2 text-text-400">
                 <a
-                  href="#"
-                  className="text-primary-500 hover:text-primary-600 transition-colors"
+                  href="https://facebook.com/yourpage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Facebook"
+                  className="text-primary-500 hover:text-facebook-500 transition-colors"
                 >
                   <FacebookLogo size={24} weight="fill" />
                 </a>
                 <a
-                  href="#"
+                  href="https://wa.me/2348035843896"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   title="WhatsApp"
-                  className="text-primary-500 hover:text-primary-600 transition-colors"
+                  className="text-primary-500 hover:text-whatsapp-500 transition-colors"
                 >
                   <WhatsappLogo size={24} weight="fill" />
                 </a>
                 <a
-                  href="#"
+                  href="https://instagram.com/yourprofile"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   title="Instagram"
-                  className="text-primary-500 hover:text-primary-600 transition-colors"
+                  className="text-primary-500 hover:text-instagram-500 transition-colors"
                 >
                   <InstagramLogo size={24} weight="fill" />
                 </a>

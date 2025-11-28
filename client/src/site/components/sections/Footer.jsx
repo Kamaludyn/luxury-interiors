@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   InstagramLogo,
@@ -13,7 +14,7 @@ const Footer = () => {
   return (
     <>
       <StartProjectCTA />
-      <section className="relative w-full overflow-hidden bg-primary-500 text-surface-500 pt-10 md:pt-18 pb-10 border-t border-border-500/30">
+      <footer className="relative w-full overflow-hidden bg-primary-500 text-surface-500 pt-10 md:pt-14 pb-10 border-t border-border-500/30">
         <div className="container relative mx-auto px-6 md:px-12 lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -38,44 +39,44 @@ const Footer = () => {
               </h4>
               <ul className="space-y-2">
                 <li>
-                  <a
-                    href="/"
-                    className="hover:text-primary-500 transition-colors"
+                  <Link
+                    to="/"
+                    className="hover:text-primary-600 transition-colors"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/about"
-                    className="hover:text-primary-500 transition-colors"
+                  <Link
+                    to="/about-us"
+                    className="hover:text-primary-600 transition-colors"
                   >
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/services"
-                    className="hover:text-primary-500 transition-colors"
+                  <Link
+                    to="/services"
+                    className="hover:text-primary-600 transition-colors"
                   >
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/projects"
-                    className="hover:text-primary-500 transition-colors"
+                  <Link
+                    to="/projects"
+                    className="hover:text-primary-600 transition-colors"
                   >
                     Projects
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/contact"
-                    className="hover:text-primary-500 transition-colors"
+                  <Link
+                    to="/contact-us"
+                    className="hover:text-primary-600 transition-colors"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -101,20 +102,27 @@ const Footer = () => {
 
               <div className="flex gap-4 mt-6">
                 <a
-                  href="#"
-                  className="p-2 bg-surface-500/10 rounded-full hover:bg-primary-600 hover:text-white transition-all"
+                  href="https://facebook.com/yourpage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-surface-500/10 rounded-full hover:bg-facebook-500 hover:text-surface-500 text-facebook-500 transition-all"
                 >
                   <FacebookLogo size={20} weight="fill" />
                 </a>
+
                 <a
-                  href="#"
-                  className="p-2 bg-surface-500/10 rounded-full hover:bg-primary-600 hover:text-white transition-all"
+                  href="https://wa.me/234XXXXXXXXXX"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-surface-500/10 rounded-full hover:bg-whatsapp-500 hover:text-surface-500 text-whatsapp-500 transition-all"
                 >
                   <WhatsappLogo size={20} weight="fill" />
                 </a>
                 <a
-                  href="#"
-                  className="p-2 bg-surface-500/10 rounded-full hover:bg-primary-600 hover:text-white transition-all"
+                  href="https://instagram.com/yourprofile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-surface-500/10 rounded-full hover:bg-instagram-500/80 hover:text-surface-500 text-instagram-500 transition-all"
                 >
                   <InstagramLogo size={20} weight="fill" />
                 </a>
@@ -142,7 +150,7 @@ const Footer = () => {
             </p>
           </motion.div>
         </div>
-      </section>
+      </footer>
     </>
   );
 };

@@ -23,7 +23,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="relative pb-24 md:pb-8 bg-surface-500 text-text-500 dark:text-text-700 overflow-visible">
+    <section className="relative py-24 pb-24 md:pb-8 bg-surface-500 text-text-500 dark:text-text-700 overflow-visible">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 200"
