@@ -6,6 +6,7 @@ import "leaflet/dist/leaflet.css";
 import { ToasterPortal, themeMap } from "@acrool/react-toaster";
 import "@acrool/react-toaster/dist/index.css";
 import QueryProvider from "./shared/context/QueryProvider";
+import { Analytics } from "@vercel/analytics/react";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -21,5 +22,6 @@ createRoot(document.getElementById("root")).render(
         themeMap={themeMap}
       />
     </QueryProvider>
+    <Analytics />
   </StrictMode>
 );

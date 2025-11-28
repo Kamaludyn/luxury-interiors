@@ -9,10 +9,6 @@ import errorHandler from "./src/middleware/error.js";
 import authRoutes from "./src/routes/auth.routes.js";
 import projectsRoutes from "./src/routes/projects.routes.js";
 
-// Load environment variables from .env file
-
-// Import route handlers
-
 // Initialize Express app
 const app = express();
 

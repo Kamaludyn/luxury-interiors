@@ -2,7 +2,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowCircleRight } from "phosphor-react";
 import { useProjects } from "../../../shared/hooks/useProjects";
-import ProjectsPlaceHolder from "../ui/ProjectsPlaceholder";
+import ProjectsPlaceholder from "../ui/ProjectsPlaceholder";
 
 const LatestProjects = () => {
   const limit = 8
@@ -35,7 +35,7 @@ const LatestProjects = () => {
         </motion.div>
 
         {isFetching || projects?.length < 1 ? (
-          <ProjectsPlaceHolder projectsNumber={3} />
+          <ProjectsPlaceholder projectsNumber={3} />
         ) : (
           <div className="grid md:grid-cols-3 gap-8">
             {projects?.map((project, index) => (

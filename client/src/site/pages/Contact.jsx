@@ -115,6 +115,8 @@ const Contact = () => {
               <textarea className="bg-surface-500 w-full p-2 mb-4 border-2 border-transparent focus:border-primary-600 outline-0 text-primary-500 rounded-md" />
               <a
                 href="mailto:abdulkarimceilinganddecor@gmail.com?subject=Request%20a%20Quote"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-primary-500 px-4 py-2 text-surface-500 hover:bg-primary-600 rounded-md ml-auto cursor-pointer"
               >
                 Request a Quote

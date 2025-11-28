@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import ProjectDetailsPlaceholder from "../components/ui/ProjectDetailsPlaceHolder";
+import ProjectDetailsPlaceholder from "../components/ui/ProjectDetailsPlaceholder";
 import api from "../../shared/services/api";
 
 const ProjectDetails = () => {
