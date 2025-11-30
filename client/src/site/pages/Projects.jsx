@@ -10,7 +10,7 @@ const Projects = () => {
   const [page, setPage] = useState(1);
   const limit = 8;
 
-  const { data, isFetching } = useProjects(page, limit);
+  const { data, isFetching, isError } = useProjects(page, limit);
 
   const projects = data?.projects || [];
   const pagination = data?.pagination || {
@@ -26,8 +26,8 @@ const Projects = () => {
         </h2>
       </div>
       <div className="container mx-auto p-6 md:py-12 lg:px-20 relative z-10">
-        {isFetching || projects.length < 1 ? (
-          <ProjectsPlaceholder projectsNumber={4} isGrid4/>
+        {isFetching || isError ? (
+          <ProjectsPlaceholder projectsNumber={4} isGrid4 />
         ) : (
           <div className="grid md:grid-cols-4 gap-8">
             {projects.map((project, index) => (
@@ -69,16 +69,15 @@ const Projects = () => {
         )}
         <nav className="w-full text-base mt-4 md:mt-8" aria-label="projects">
           <div className="w-36 mx-auto flex items-center justify-between gap-2 md:gap-4">
-             {page > 1 && (
-             <button
-               onClick={() => setPage((p) => Math.max(1, p - 1))}>
-              <ArrowLeft
-                size={22}
-                weight="bold"
-                className="mr-4 text-primary-500 cursor-pointer"
-              />
+            {page > 1 && (
+              <button onClick={() => setPage((p) => Math.max(1, p - 1))}>
+                <ArrowLeft
+                  size={22}
+                  weight="bold"
+                  className="mr-4 text-primary-500 cursor-pointer"
+                />
               </button>
-              )}
+            )}
             <span
               aria-label="Page 1"
               className="text-surface-500 bg-primary-500 hover:bg-primary-600 h-8 w-8 pt-1 text-center self-center rounded-full cursor-pointer"
@@ -93,17 +92,20 @@ const Projects = () => {
             >
               2
             </span>
-           { !page === pagination.totalPages || page === 1 && (
-           <button
-            onClick={() => setPage((p) => Math.min(pagination.totalPages, p + 1))
-                }>
-              <ArrowRight
-                size={22}
-                weight="bold"
-                className="ml-4 text-primary-500 cursor-pointer"
-              />
-            </button>
-            )}
+            {!page === pagination.totalPages ||
+              (page === 1 && (
+                <button
+                  onClick={() =>
+                    setPage((p) => Math.min(pagination.totalPages, p + 1))
+                  }
+                >
+                  <ArrowRight
+                    size={22}
+                    weight="bold"
+                    className="ml-4 text-primary-500 cursor-pointer"
+                  />
+                </button>
+              ))}
           </div>
         </nav>
       </div>

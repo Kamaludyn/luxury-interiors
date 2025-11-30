@@ -5,9 +5,9 @@ import { useProjects } from "../../../shared/hooks/useProjects";
 import ProjectsPlaceholder from "../ui/ProjectsPlaceholder";
 
 const LatestProjects = () => {
-  const limit = 8
-  const page = 1
-  const { data, isFetching } = useProjects(page, limit);
+  const limit = 8;
+  const page = 1;
+  const { data, isFetching, isError } = useProjects(page, limit);
   const navigate = useNavigate();
 
   const projects = data?.projects?.slice(0, 3);
@@ -34,7 +34,7 @@ const LatestProjects = () => {
           </p>
         </motion.div>
 
-        {isFetching || projects?.length < 1 ? (
+        {isFetching || isError ? (
           <ProjectsPlaceholder projectsNumber={3} />
         ) : (
           <div className="grid md:grid-cols-3 gap-8">
