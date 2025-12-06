@@ -17,8 +17,8 @@ export default function ServicesSection() {
     },
     {
       icon: <AlignBottom size={68} />,
-      title: "Coastal & Functional Design",
-      desc: "Relaxed luxury meets performance, spaces that breathe, glow, and adapt to coastal lifestyles.",
+      title: "Modern & Functional Design",
+      desc: "Relaxed luxury meets performance, spaces that breathe, glow, and adapt to modern lifestyles.",
     },
   ];
 

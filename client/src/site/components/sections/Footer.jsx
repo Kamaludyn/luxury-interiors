@@ -21,7 +21,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="grid md:grid-cols-[40%_30%_30%] gap-8 md:gap-4 mb-12"
+            className="grid md:grid-cols-[36%_32%_32%] gap-8 md:gap-4 mb-12"
           >
             <div className="space-y-4">
               <h3 className="text-2xl text-surface-500 font-['Cormorant_Garamond'] font-semibold">
@@ -33,7 +33,7 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="">
+            <div>
               <h4 className="text-surface-500 text-lg font-medium mb-4">
                 Quick Links
               </h4>
@@ -81,7 +81,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="">
+            <div>
               <h4 className="text-surface-500 text-lg font-medium mb-4">
                 Get In Touch
               </h4>

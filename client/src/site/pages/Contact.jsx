@@ -1,6 +1,7 @@
 import { EnvelopeSimple, Phone, MapPin } from "phosphor-react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
+import Header from "../components/ui/Header";
 
 // Custom marker icon (Leaflet breaks without this)
 const markerIcon = new L.Icon({
@@ -17,11 +18,7 @@ const position = [9.0091514, 7.4767806]; // Gudu Abuja coordinates
 const Contact = () => {
   return (
     <div className="relative w-full bg-surface-500 dark:bg-background-800 text-text-500 dark:text-text-700 overflow-hidden">
-      <div className="w-full bg-primary-600 px-10 md:px-32 pt-32 md:pt-18 pb-6">
-        <h2 className="container text-center md:text-left text-4xl font-black text-primary-500">
-          Contact
-        </h2>
-      </div>
+      <Header title={"Contact"} />
       <div className="container mx-auto p-6 md:p-12 lg:px-20 relative z-10 space-y-4 md:space-y-6">
         <div className="flex flex-col md:flex-row justify-between gap-4 mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-4 p-2 group cursor-pointer">
@@ -32,7 +29,7 @@ const Contact = () => {
               <p className="text-primary-500 text-2xl font-bold text-center md:text-left group-hover:text-primary-600">
                 Email
               </p>
-              <span className="text-sm text-primary-500/60 word-break: break-all">
+              <span className="text-primary-500/60 word-break: break-all">
                 abdulkarimceilinganddecor@gmail.com
               </span>
             </div>
@@ -45,7 +42,7 @@ const Contact = () => {
               <p className="text-primary-500 text-2xl font-bold text-center md:text-left group-hover:text-primary-600">
                 Phone
               </p>
-              <span className="text-sm text-primary-500/60">
+              <span className="text-primary-500/60">
                 +234 8035843896
               </span>
             </div>
@@ -58,7 +55,7 @@ const Contact = () => {
               <p className="text-primary-500 text-2xl font-bold text-center md:text-left group-hover:text-primary-600">
                 Address
               </p>
-              <span className="text-sm text-primary-500/60">
+              <span className="text-primary-500/60">
                 Gudu, Abuja, Nigeria
               </span>
             </div>

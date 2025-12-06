@@ -13,13 +13,10 @@ const AboutUs = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-primary-500 mb-4">
-            About Us
+            Professional Ceiling & Interior Decoration Experts in Abuja
           </h2>
           <p className="text-text-400 leading-relaxed">
-            We are a collective of designers and architects dedicated to
-            creating spaces that embody quiet sophistication. Every project is a
-            dialogue between architecture, light, and the human experience —
-            shaped with intention and precision.
+            We are a trusted ceiling and interior decoration company based in Abuja, offering Gypsum ceilings, gypsum board installations, Tv design, wall paneling, partitions, shelving, and complete interior finishing. With years of experience and a strong reputation for quality, we deliver durable craftsmanship, clean finishing, and timely project completion for homes, offices, hotels, and real estate projects across Abuja.
           </p>
         </motion.div>
 
@@ -27,18 +24,18 @@ const AboutUs = () => {
           {[
             {
               icon: <Buildings size={40} className="text-primary-500" />,
-              title: "Architectural Harmony",
-              desc: "Our philosophy blends proportion, rhythm, and spatial clarity — crafting structures that breathe elegance and purpose.",
+              title: "Quality Craftsmanship",
+              desc: "We use the best POP and gypsum materials to deliver long-lasting, premium finishes.",
             },
             {
               icon: <Ruler size={40} />,
-              title: "Tailored Precision",
-              desc: "From concept to finish, each line, material, and detail is curated to reflect your individuality with meticulous accuracy.",
+              title: "Experienced Team",
+              desc: "Skilled artisans with years of experience in residential and commercial interior projects in Abuja.",
             },
             {
               icon: <DiamondsFour size={40} />,
-              title: "Refined Luxury",
-              desc: "We design experiences that feel effortless — understated yet striking, timeless yet deeply personal.",
+              title: "Timely Delivery",
+              desc: "We design experiences that feel effortless, timeless yet deeply personal and we ensure every project is completed on schedule",
             },
           ].map((card, i) => (
             <motion.div

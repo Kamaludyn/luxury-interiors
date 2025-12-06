@@ -29,8 +29,7 @@ const LatestProjects = () => {
             Latest Projects
           </h2>
           <p className="text-text-400 dark:text-text-700/70 max-w-2xl mx-auto leading-relaxed">
-            A glimpse into our most recent transformations where craftsmanship,
-            artistry, and innovation converge.
+            A glimpse into our most recent transformations in various parts of Abuja including Gwarinpa, Lokogoma, Wuse, Lugbe, and Maitama. where craftsmanship, artistry, and innovation converge.
           </p>
         </motion.div>
 

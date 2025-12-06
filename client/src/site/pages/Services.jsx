@@ -2,81 +2,68 @@ import { motion } from "framer-motion";
 import partitionWall from "../../assets/imgs/office-partition.jpg";
 import gypsum from "../../assets/imgs/modern-gypsum.jpg";
 import interior from "../../assets/imgs/prjts1.PNG";
+import Header from "../components/ui/Header";
 
 const Services = () => {
   const services = [
     {
       id: 1,
-      title: "Seaside Residence",
-      desc: "Seaside Residence Residence Residence Residence Residence",
-      image: partitionWall,
+      title: "Gypsum Ceiling Installation",
+      desc: "Modern and durable gypsum ceilings for homes, offices, and commercial spaces in Abuja. Clean finishing with lighting integrations.",
+      image: gypsum,
     },
     {
       id: 2,
-      title: "Modern Penthouse Interior",
-      desc: "Modern Penthouse Interior Interior Interior Interior Interior Interior",
-      image: gypsum,
-    },
-    {
-      id: 3,
-      title: "Coastal Retreat Villa",
-      desc: "Coastal Retreat Villa Villa Villa Villa Villa Villa",
+      title: "Custom Shelves & Wall Units",
+      desc: "Well-crafted floating shelves, wall units, and storage solutions designed to fit perfectly into your interior space.",
       image: interior,
     },
     {
-      id: 4,
-      title: "Coastal Retreat Villa",
-      desc: "Coastal Retreat Villa Villa Villa Villa Villa Villa",
+      id: 3,
+      title: "Bathroom Interior Design",
+      desc: "Beautiful bathroom designs including wall panels, tiling, vanities, and waterproof finishing for luxury modern bathrooms.",
       image: partitionWall,
     },
     {
-      id: 5,
-      title: "Coastal Retreat Villa",
-      desc: "Coastal Retreat Villa Villa Villa Villa Villa Villa",
+      id: 4,
+      title: "Modern TV Wall Design",
+      desc: "Stylish TV walls with 3D panels, floating consoles, LED lighting, and cable concealment for a clean modern look.",
       image: gypsum,
     },
     {
+      id: 5,
+      title: "Drywall Partition Installation",
+      desc: "Strong, clean, and professional drywall partitions for homes, offices, and commercial buildings in Abuja.",
+      image: partitionWall,
+    },
+    {
       id: 6,
-      title: "Coastal Retreat Villa",
-      desc: "Coastal Retreat Villa Villa Villa Villa Villa Villa",
+      title: "POP Wall Screeding",
+      desc: "Smooth, flawless POP wall screeding for painting, renovation, and interior finishing perfect for modern Abuja homes.",
       image: interior,
     },
     {
       id: 7,
-      title: "Coastal Retreat Villa",
-      desc: "Coastal Retreat Villa Villa Villa Villa Villa Villa",
-      image: partitionWall,
-    },
-    {
-      id: 8,
-      title: "Coastal Retreat Villa",
-      desc: "Coastal Retreat Villa Villa Villa Villa Villa Villa",
+      title: "Professional Painting Services",
+      desc: "High-quality wall painting with premium materials and neat finishing for residential and commercial projects in Abuja.",
       image: gypsum,
     },
   ];
+
   return (
     <div className="relative w-full bg-surface-500 dark:bg-background-800 text-text-500 dark:text-text-700 overflow-hidden">
-      <div className="w-full bg-primary-600 px-10 md:px-32 pt-32 md:pt-18 pb-6">
-        <h2 className="container text-center md:text-left text-4xl font-black text-primary-500">
-          Services
-        </h2>
-      </div>
+      <Header title={"Our Services"} />
       <div className="container mx-auto px-6 py-8 md:py-10 md:px-12 lg:px-20 relative z-10">
+        <section>
+          <p className="pb-6 md:pb-8 text-center text-text-400 md:text-lg leading-relaxed">
+            We offer professional interior and ceiling services in Abuja,
+            including gypsum ceilings, POP wall screeding, drywall partitions,
+            TV wall design, shelves, bathroom interiors, and painting. Our team
+            delivers clean finishing, modern designs, and durable workmanship
+            for homes, offices, and commercial spaces across Abuja.
+          </p>
+        </section>
         <div className="grid md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="font-bold text-4xl md:text-5xl text-primary-500 md:pb-6 leading-10">
-              Our{" "}
-              <span className="font-black text-primary-600 underline">
-                Services
-              </span>
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              consequatur natus mollitia minus tenetur corporis vel dicta
-              provident distinctio sit vero ab fugit, impedit nihil autem atque.
-              Quaerat doloremque accusamus corrupti unde.
-            </p>
-          </div>
           {services.map((project, index) => (
             <motion.div
               key={project.id}
@@ -84,20 +71,22 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               viewport={{ once: true }}
-              className="relative mb-20 group rounded-2xl cursor-pointer shadow-lg hover:shadow-xl transition-all duration-500"
+              className="relative mb-20 group rounded-2xl cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 bg-surface-500 dark:bg-background-800"
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-60 object-cover transform group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-md"
-              />
-
-              {/* Text Overlay */}
-              <div className="bg-surface-500 flex flex-col justify-center absolute -bottom-[30%] left-2 right-2 p-2 md:p-4 transition-all duration-500 rounded-lg shadow-lg z-30 group-hover:opacity-0">
-                <h3 className="text-primary-500 text-2xl font-semibold">
+              <div className="overflow-hidden rounded-t-2xl">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-60 object-cover transform group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                />
+              </div>
+              <div className="p-4 md:p-5">
+                <h3 className="text-primary-500 text-2xl font-semibold mb-2">
                   {project.title}
                 </h3>
-                <p>{project.desc}</p>
+                <p className="text-text-500 dark:text-text-700 leading-relaxed text-sm md:text-base">
+                  {project.desc}
+                </p>
               </div>
             </motion.div>
           ))}

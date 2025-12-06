@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, ArrowLeft, ArrowCircleRight } from "phosphor-react";
 import { useProjects } from "../../shared/hooks/useProjects";
 import ProjectsPlaceholder from "../components/ui/ProjectsPlaceholder";
+import Header from "../components/ui/Header";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -20,12 +21,16 @@ const Projects = () => {
   };
   return (
     <div className="relative w-full bg-surface-500 dark:bg-background-800 text-text-500 dark:text-text-700 overflow-hidden">
-      <div className="w-full bg-primary-600 px-10 md:px-32 pt-32 md:pt-18 pb-6">
-        <h2 className="container text-center md:text-left text-4xl font-black text-primary-500">
-          Projects
-        </h2>
-      </div>
-      <div className="container mx-auto p-6 md:py-12 lg:px-20 relative z-10">
+      <Header title={"Projects"} />
+      <section className="container mx-auto p-6 md:py-12 lg:px-20 relative z-10">
+        <p className="container mx-auto text-center text-base pb-6 md:pb-8 md:text-lg text-text-400">
+          Explore our completed work across Abuja and other Nigerian cities
+          including gypsum ceiling installation, drywall partitions, POP wall
+          screeding, modern TV wall designs, custom shelves, bathroom interior
+          design, and professional painting for residential and commercial
+          spaces. Our projects showcase high-quality craftsmanship, premium
+          finishing, and modern interior aesthetics.
+        </p>
         {isFetching || isError ? (
           <ProjectsPlaceholder projectsNumber={4} isGrid4 />
         ) : (
@@ -41,12 +46,14 @@ const Projects = () => {
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 viewport={{ once: true }}
                 className="relative group overflow-hidden rounded-2xl cursor-pointer shadow-lg hover:shadow-xl transition-all duration-500"
+                aria-label={`Project: ${project.title}`}
               >
                 <motion.img
                   src={project.posterImage.secureUrl}
-                  alt={project.title}
+                  alt={`Interior design project in Abuja – ${project.title}`}
                   className="w-full h-60 object-cover transform group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                   whileHover={{ scale: 1.05 }}
+                  loading="lazy"
                 />
 
                 {/* Overlay */}
@@ -67,7 +74,10 @@ const Projects = () => {
             ))}
           </div>
         )}
-        <nav className="w-full text-base mt-4 md:mt-8" aria-label="projects">
+        <nav
+          className="w-full text-base mt-4 md:mt-8"
+          aria-label="projects pagination"
+        >
           <div className="w-36 mx-auto flex items-center justify-between gap-2 md:gap-4">
             {page > 1 && (
               <button onClick={() => setPage((p) => Math.max(1, p - 1))}>
@@ -108,7 +118,15 @@ const Projects = () => {
               ))}
           </div>
         </nav>
-      </div>
+        <footer className="text-center mt-14 mx-auto text-base text-text-600 max-w-3xl opacity-80 leading-relaxed">
+          We proudly serve clients across Abuja including Gwarinpa, Wuse,
+          Maitama, Utako, Lokogoma, Jahi, Lugbe, and Kubwa. We also take on
+          interior finishing projects across Nigeria based on request. Our team
+          delivers premium craftsmanship in gypsum ceilings, drywall partitions,
+          POP wall screeding, TV wall designs, bathroom interiors, custom wall
+          units, and professional painting for homes and commercial buildings.
+        </footer>
+      </section>
     </div>
   );
 };
