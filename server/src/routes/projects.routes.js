@@ -10,6 +10,9 @@ const router = express.Router();
 // @route  GET /api/project?page&limit
 router.get("/", projectController.getAllProjects);
 
+// @route  GET /api/project/count
+router.get("/count", projectController.getProjectsCount);
+
 // @route  GET /api/project/:id
 router.get("/:projectId", projectController.getProjectById);
 

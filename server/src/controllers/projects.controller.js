@@ -206,6 +206,18 @@ const updateProject = async (req, res) => {
   });
 };
 
+// @desc    Get total number of projects
+// @route   GET /api/projects/count
+// @access  Public
+const getProjectsCount = asyncHandler(async (req, res) => {
+  const count = await Project.countDocuments();
+
+  res.status(200).json({
+    success: true,
+    projectsCount: count,
+  });
+});
+
 // @desc    Delete a project
 // @route   DELETE /api/projects/:projectId
 // @access  Private
@@ -255,6 +267,7 @@ const projectController = {
   getAllProjects,
   getProjectById,
   updateProject,
+  getProjectsCount,
   deleteProject,
 };
 
