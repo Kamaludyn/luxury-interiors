@@ -12,6 +12,18 @@ export const useProjects = (page = 1, limit = 10) => {
   });
 };
 
+export const useProjectsCount = () => {
+  const fetchCount = async () => {
+    const res = await api.get("/projects/count");
+    return res.data.projectsCount;
+  };
+
+  return useQuery({
+    queryKey: ["projectsCount"],
+    queryFn: fetchCount,
+  });
+};
+
 export const useProjectsForm = () => {
   const queryClient = useQueryClient();
 
