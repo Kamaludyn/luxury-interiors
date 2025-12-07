@@ -14,6 +14,7 @@ import DashboardProjects from "./admin/pages/Projects";
 import AdminProfile from "./admin/pages/Profile";
 import AdminProfileSettings from "./admin/pages/ProfileSettings";
 import ResetPassword from "./admin/pages/ResetPassword";
+import ProtectedRoute from "./admin/components/ProtectedRoute";
 import NotFound from "./site/pages/NotFound";
 
 const router = createBrowserRouter([
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       {
-        path: "",
+        index: true,
         element: <Home />,
       },
       {
@@ -49,24 +50,28 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <AdminLayout />,
+    element: <ProtectedRoute />,
     children: [
       {
-        path: "",
-        index: true,
-        element: <DashboardHome />,
-      },
-      {
-        path: "projects",
-        element: <DashboardProjects />,
-      },
-      {
-        path: "profile",
-        element: <AdminProfile />,
-      },
-      {
-        path: "profile-settings",
-        element: <AdminProfileSettings />,
+        element: <AdminLayout />,
+        children: [
+          {
+            index: true,
+            element: <DashboardHome />,
+          },
+          {
+            path: "projects",
+            element: <DashboardProjects />,
+          },
+          {
+            path: "profile",
+            element: <AdminProfile />,
+          },
+          {
+            path: "profile-settings",
+            element: <AdminProfileSettings />,
+          },
+        ],
       },
     ],
   },
