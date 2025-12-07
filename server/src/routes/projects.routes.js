@@ -7,19 +7,19 @@ const router = express.Router();
 
 // *** Public Routes *** //
 
-// @route  GET /api/project?page&limit
-router.get("/", projectController.getAllProjects);
-
-// @route  GET /api/project/count
+// @route  GET /api/projects/count
 router.get("/count", projectController.getProjectsCount);
 
-// @route  GET /api/project/:id
+// @route  GET /api/projects?page&limit
+router.get("/", projectController.getAllProjects);
+
+// @route  GET /api/projects/:id
 router.get("/:projectId", projectController.getProjectById);
 
 // *** Private Routes *** //
 router.use(verify);
 
-// @route  POST /api/project
+// @route  POST /api/projects
 router.post(
   "/",
   upload.fields([
@@ -29,7 +29,7 @@ router.post(
   projectController.addProject
 );
 
-// @route  PATCH /api/project/:id
+// @route  PATCH /api/projects/:id
 router.patch(
   "/:projectId",
   upload.fields([
@@ -39,7 +39,7 @@ router.patch(
   projectController.updateProject
 );
 
-// @route  DELETE /api/project/:id
+// @route  DELETE /api/projects/:id
 router.delete("/:projectId", projectController.deleteProject);
 
 export default router;
