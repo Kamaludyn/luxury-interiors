@@ -26,7 +26,9 @@ export default function MobileSidebar({ open, onClose, handleLogout }) {
 
       <aside className="relative w-64 h-full bg-surface-500 dark:bg-surface-800 p-4 shadow-lg">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-lg font-bold"><Link to="/">AC&D</Link></h2>
+          <h2 className="text-lg font-bold">
+            <Link to="/">AC&D</Link>
+          </h2>
           <button onClick={onClose}>
             <X weight="bold" className="w-5 h-5  cursor-pointer" />
           </button>
@@ -49,7 +51,7 @@ export default function MobileSidebar({ open, onClose, handleLogout }) {
           ))}
           <button
             onClick={handleLogout}
-            className="w-full text-left text-sm rounded-lg hover:bg-danger-800/20 p-2 mt-4 text-danger-800 cursor-pointer"
+            className="w-full text-left text-sm rounded-lg hover:bg-danger-800/20 px-4 mt-4 text-danger-800 cursor-pointer"
           >
             Logout
           </button>

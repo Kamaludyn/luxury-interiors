@@ -187,7 +187,7 @@ const ProjectsForm = ({ project, isEdit, onClose }) => {
                   id="galleryUpload"
                   type="file"
                   multiple
-                  className="block my-2 border border-gray-300 rounded p-1"
+                  className="block w-full my-2 border border-gray-300 rounded p-1"
                   onChange={(e) => setGalleryFiles([...e.target.files])}
                 />
               </div>
@@ -195,7 +195,7 @@ const ProjectsForm = ({ project, isEdit, onClose }) => {
           </div>
         </form>
 
-        <div className="mt-6 flex justify-end gap-3">
+        <div className="mt-6 flex md:justify-end gap-3">
           <button
             className="px-4 py-2 bg-gray-300 hover:bg-transparent border border-gray-300 rounded cursor-pointer shadow-md disabled:cursor-not-allowed"
             onClick={onClose}
