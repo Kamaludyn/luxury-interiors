@@ -107,7 +107,7 @@ const Navbar = () => {
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 0.4 }}
                   className="absolute left-6 flex flex-col items-center gap-2 px-1 md:w-[20%]"
                 >
                   <div className="absolute top-3 inset-x-5 bg-primary-600/20 h-10 w-[80%] " />

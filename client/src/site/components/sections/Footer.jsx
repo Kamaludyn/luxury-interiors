@@ -19,12 +19,12 @@ const Footer = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
             viewport={{ once: true }}
             className="grid md:grid-cols-[36%_32%_32%] gap-8 md:gap-4 mb-12"
           >
             <div className="space-y-4">
-              <h3 className="text-2xl text-surface-500 font-['Cormorant_Garamond'] font-semibold">
+              <h3 className="text-xl md:text-2xl text-surface-500 font-['Cormorant_Garamond'] font-semibold">
                 AbdulKarim Ceiling and Decor & Co.
               </h3>
               <p className="leading-relaxed max-w-sm">
@@ -34,8 +34,10 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="text-surface-500 text-lg font-medium mb-4">
+              <h4 className="text-surface-500 text-lg font-medium mb-2 ">
+              <span className="cormorantFont pb-1 border-b border-surface-500/50">
                 Quick Links
+                </span>
               </h4>
               <ul className="space-y-2">
                 <li>
@@ -143,10 +145,6 @@ const Footer = () => {
             <p className="text-center">
               © {new Date().getFullYear()} ABDULKARIM CEILING AND DECOR. All
               Rights Reserved.
-            </p>
-            <p className="mt-2 md:mt-0">
-              Designed with <span className="text-primary-600">elegance</span> &
-              precision.
             </p>
           </motion.div>
         </div>

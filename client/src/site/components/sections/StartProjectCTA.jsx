@@ -6,15 +6,15 @@ const StartProjectCTA = () => {
   const Motionlink = motion.create(Link)
   return (
     <section className="relative w-full py-6 bg-primary-600">
-      <div className="container mx-auto relative flex flex-col md:flex-row justify-center items-center gap-4 px-6">
+      <div className="container mx-auto relative flex flex-col md:flex-row justify-center items-center gap-4 px-6 md:px-12">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           viewport={{ once: true }}
           className="relative w-[90%] md:w-[80%] text-center md:text-left space-y-2 z-10"
         >
-          <h2 className="text-primary-500 text-3xl md:text-5xl font-semibold font-['Cormorant_Garamond'] tracking-wide">
+          <h2 className="text-primary-500 text-2xl md:text-5xl font-bold font-['Cormorant_Garamond'] tracking-wide">
             Start a Project With Us
           </h2>
           <p className="text-base text-surface-500">

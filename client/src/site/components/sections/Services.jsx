@@ -17,8 +17,8 @@ export default function ServicesSection() {
     },
     {
       icon: <AlignBottom size={68} />,
-      title: "Modern & Functional Design",
-      desc: "Relaxed luxury meets performance, spaces that breathe, glow, and adapt to modern lifestyles.",
+      title: "Coastal & Functional Design",
+      desc: "Relaxed luxury meets performance, spaces that breathe, glow, and adapt to coastal lifestyles.",
     },
   ];
 
@@ -47,9 +47,9 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
+              transition={{ duration: 0.4 }}
               viewport={{ once: true }}
               className={`flex flex-col place-items-center p-8 transition-all duration-300 hover:-translate-y-7 group ${
                 index === 1 ? "md:translate-y-8 hover:translate-y-2" : ""

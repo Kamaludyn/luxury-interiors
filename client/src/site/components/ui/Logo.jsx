@@ -1,14 +1,9 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 const Logo = () => {
-  const Motionlink = motion.create(Link)
   return (
-    <Motionlink
+    <Link
     to='/'
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
       className="relative flex flex-col items-center justify-center gap-1 md:px-1 md:w-[20%]"
     >
       <div className="absolute top-3.5 md:top-3 -inset-1.5 md:inset-x-5 bg-primary-600/20 h-7 md:h-10 md:w-[80%]" />
@@ -21,7 +16,7 @@ const Logo = () => {
         </h2>
         <p className="text-primary-500 text-xs">CEILING AND DECOR & CO</p>
       </div>
-    </Motionlink>
+    </Link>
   );
 };
 export default Logo;

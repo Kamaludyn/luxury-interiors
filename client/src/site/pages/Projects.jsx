@@ -22,7 +22,7 @@ const Projects = () => {
   return (
     <div className="relative w-full bg-surface-500 dark:bg-background-800 text-text-500 dark:text-text-700 overflow-hidden">
       <Header title={"Projects"} />
-      <section className="container mx-auto p-6 md:py-12 lg:px-20 relative z-10">
+         <section className="container mx-auto px-6 py-8 md:py-10 md:px-12 lg:px-20 relative z-10">
         <p className="container mx-auto text-center text-base pb-6 md:pb-8 md:text-lg text-text-400">
           Explore our completed work across Abuja and other Nigerian cities
           including gypsum ceiling installation, drywall partitions, POP wall
@@ -31,7 +31,7 @@ const Projects = () => {
           spaces. Our projects showcase high-quality craftsmanship, premium
           finishing, and modern interior aesthetics.
         </p>
-        {isFetching || isError ? (
+        {isFetching || isError || projects?.length <= 0 ? (
           <ProjectsPlaceholder projectsNumber={4} isGrid4 />
         ) : (
           <div className="grid md:grid-cols-4 gap-8">
@@ -41,9 +41,9 @@ const Projects = () => {
                 onClick={() =>
                   navigate(`/projects/${project._id}`, { state: { project } })
                 }
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
+                transition={{ duration: 0.4 }}
                 viewport={{ once: true }}
                 className="relative group overflow-hidden rounded-2xl cursor-pointer shadow-lg hover:shadow-xl transition-all duration-500"
                 aria-label={`Project: ${project.title}`}
@@ -118,7 +118,7 @@ const Projects = () => {
               ))}
           </div>
         </nav>
-        <footer className="text-center mt-14 mx-auto text-base text-text-600 max-w-3xl opacity-80 leading-relaxed">
+          <footer className="container max-w-6xl mx-auto p-6 mt-8 md:mt-12 text-md text-center opacity-80 leading-relaxed border-t border-primary-500/40 ">
           We proudly serve clients across Abuja including Gwarinpa, Wuse,
           Maitama, Utako, Lokogoma, Jahi, Lugbe, and Kubwa. We also take on
           interior finishing projects across Nigeria based on request. Our team

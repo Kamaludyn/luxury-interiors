@@ -7,8 +7,8 @@ const About = () => {
   return (
     <div className="relative w-full bg-surface-500 dark:bg-background-800 text-text-500 dark:text-text-700 overflow-hidden">
       <Header title={"Who are we?"} />
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
-        <div className="flex flex-col md:flex-row gap-4 md:gap-6 w-full my-4 md:my-10">
+      <div className="container mx-auto px-6 py-8 md:py-10 md:px-12 lg:px-20 relative z-10">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 w-full">
           <section className="w-full text-center md:text-left md:w-4/6 pb-6 rounded-md">
             <p className="leading-relaxed text-text-600 md:text-lg">
               We are a dedicated team of interior finishing professionals who
@@ -50,11 +50,11 @@ const About = () => {
           <motion.img
             src={gypsum}
             alt="Modern gypsum ceiling and interior design project in Abuja"
-            className="md:w-2/6 h-fit object-cover transform group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-md"
+            className="md:w-2/6 max-h-[67vh] object-cover transform group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-md"
             whileHover={{ scale: 1.05 }}
             loading="lazy"
           />
-          <p className="md:hidden mt-6 text-text-600 leading-relaxed">
+          <p className="md:hidden mt-6 md:mt-8 text-text-600 leading-relaxed">
             We proudly serve clients in these key locations and also handle
             nationwide interior decoration projects upon request.
           </p>

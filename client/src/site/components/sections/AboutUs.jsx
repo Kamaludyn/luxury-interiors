@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Buildings, Ruler, DiamondsFour } from "phosphor-react";
+import { UsersThree, Timer, Medal} from "phosphor-react";
 
 const AboutUs = () => {
   return (
@@ -8,7 +8,7 @@ const AboutUs = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
@@ -20,20 +20,20 @@ const AboutUs = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-4 md:gap-8">
+        <div className="grid md:grid-cols-3 gap-4 md:gap-8 text-center">
           {[
             {
-              icon: <Buildings size={40} className="text-primary-500" />,
+              icon: <Medal size={40} className="mx-auto" />,
               title: "Quality Craftsmanship",
               desc: "We use the best POP and gypsum materials to deliver long-lasting, premium finishes.",
             },
             {
-              icon: <Ruler size={40} />,
+              icon: <UsersThree size={40} className="mx-auto" />,
               title: "Experienced Team",
               desc: "Skilled artisans with years of experience in residential and commercial interior projects in Abuja.",
             },
             {
-              icon: <DiamondsFour size={40} />,
+              icon: <Timer  size={40} className="mx-auto" />,
               title: "Timely Delivery",
               desc: "We design experiences that feel effortless, timeless yet deeply personal and we ensure every project is completed on schedule",
             },

@@ -60,18 +60,18 @@ const Services = () => {
             including gypsum ceilings, POP wall screeding, drywall partitions,
             TV wall design, shelves, bathroom interiors, and painting. Our team
             delivers clean finishing, modern designs, and durable workmanship
-            for homes, offices, and commercial spaces across Abuja.
+            for homes, offices, and commercial spaces in Abuja and across Nigeria.
           </p>
         </section>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-4 md:gap-8">
           {services.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              transition={{ duration: 0.4 }}
               viewport={{ once: true }}
-              className="relative mb-20 group rounded-2xl cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 bg-surface-500 dark:bg-background-800"
+              className="relative group rounded-2xl cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 bg-surface-500 dark:bg-background-800"
             >
               <div className="overflow-hidden rounded-t-2xl">
                 <img
