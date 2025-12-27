@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import HelmetSEO from "../components/seo/HelmetSEO";
 import partitionWall from "../../assets/imgs/office-partition.jpg";
 import gypsum from "../../assets/imgs/modern-gypsum.jpg";
 import interior from "../../assets/imgs/prjts1.PNG";
@@ -51,48 +52,56 @@ const Services = () => {
   ];
 
   return (
-    <div className="relative w-full bg-surface-500 dark:bg-background-800 text-text-500 dark:text-text-700 overflow-hidden">
-      <Header title={"Our Services"} />
-      <div className="container mx-auto px-6 py-8 md:py-10 md:px-12 lg:px-20 relative z-10">
-        <section>
-          <p className="pb-6 md:pb-8 text-center text-text-400 md:text-lg leading-relaxed">
-            We offer professional interior and ceiling services in Abuja,
-            including gypsum ceilings, POP wall screeding, drywall partitions,
-            TV wall design, shelves, bathroom interiors, and painting. Our team
-            delivers clean finishing, modern designs, and durable workmanship
-            for homes, offices, and commercial spaces in Abuja and across Nigeria.
-          </p>
-        </section>
-        <div className="grid md:grid-cols-3 gap-4 md:gap-8">
-          {services.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              viewport={{ once: true }}
-              className="relative group rounded-2xl cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 bg-surface-500 dark:bg-background-800"
-            >
-              <div className="overflow-hidden rounded-t-2xl">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-60 object-cover transform group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                />
-              </div>
-              <div className="p-4 md:p-5">
-                <h3 className="text-primary-500 text-2xl font-semibold mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-text-500 dark:text-text-700 leading-relaxed text-sm md:text-base">
-                  {project.desc}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+    <>
+      <HelmetSEO
+        title="Interior Design & POP Ceiling Services"
+        description="Professional Gypsum ceiling, POP wall screeding, and TV wall design in Abuja. Quality interior finishing for homes and offices across Nigeria."
+        path="/services"
+      />
+      <main className="relative w-full bg-surface-500 dark:bg-background-800 text-text-500 dark:text-text-700 overflow-hidden">
+        <Header title={"Our Services"} />
+        <div className="container mx-auto px-6 py-8 md:py-10 md:px-12 lg:px-20 relative z-10">
+          <section>
+            <p className="pb-6 md:pb-8 text-center text-text-400 md:text-lg leading-relaxed">
+              We offer professional interior and ceiling services in Abuja,
+              including gypsum ceilings, POP wall screeding, drywall partitions,
+              TV wall design, shelves, bathroom interiors, and painting. Our
+              team delivers clean finishing, modern designs, and durable
+              workmanship for homes, offices, and commercial spaces in Abuja and
+              across Nigeria.
+            </p>
+          </section>
+          <div className="grid md:grid-cols-3 gap-4 md:gap-8">
+            {services.map((project, index) => (
+              <motion.article
+                key={project.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                viewport={{ once: true }}
+                className="relative group rounded-2xl cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 bg-surface-500 dark:bg-background-800"
+              >
+                <div className="overflow-hidden rounded-t-2xl">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-60 object-cover transform group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  />
+                </div>
+                <div className="p-4 md:p-5">
+                  <h2 className="text-primary-500 text-2xl font-semibold mb-2">
+                    {project.title}
+                  </h2>
+                  <p className="text-text-500 dark:text-text-700 leading-relaxed text-sm md:text-base">
+                    {project.desc}
+                  </p>
+                </div>
+              </motion.article>
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
+      </main>
+    </>
   );
 };
 

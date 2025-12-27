@@ -50,20 +50,28 @@ const MobileMenu = ({ isMenuOpen, toggleMenu }) => {
         {/* Socials */}
         <div className="flex items-center gap-4 text-text-400 mt-auto">
           <a
-            href="#"
+            href="https://facebook.com/abdulkarim.adamu.9655806"
+            aria-label="Follow AC&D on Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Facebook"
             className="text-primary-500 hover:text-primary-600 transition-colors"
           >
             <FacebookLogo size={24} weight="fill" />
           </a>
           <a
-            href="#"
+            href="https://wa.me/2348035843896"
+            aria-label="Contact AC&D on WhatsApp"
             title="WhatsApp"
             className="text-primary-500 hover:text-primary-600 transition-colors"
           >
             <WhatsappLogo size={24} weight="fill" />
           </a>
           <a
-            href="#"
+            href="https://instagram.com/youngslandy7/"
+            aria-label="Follow AC&D on Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
             title="Instagram"
             className="text-primary-500 hover:text-primary-600 transition-colors"
           >

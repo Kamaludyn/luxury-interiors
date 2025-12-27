@@ -73,9 +73,12 @@ const Navbar = () => {
                 </div>
                 <div className="text-sm">
                   <p className="text-text-400 italic">Phone number:</p>
-                  <p href="tel:+2348035843896" className="font-semibold text-primary-500 group-hover:text-primary-600">
+                  <a
+                    href="tel:+2348035843896"
+                    className="font-semibold text-primary-500 group-hover:text-primary-600 hover:underline"
+                  >
                     +234 803 5843 896
-                  </p>
+                  </a>
                 </div>
               </div>
 
@@ -89,7 +92,8 @@ const Navbar = () => {
                 <div className="text-sm">
                   <p className="text-text-400 italic">Address:</p>
                   <p className="font-semibold text-primary-500 group-hover:text-primary-600">
-                    Gudu, Abuja
+                    {/* Gudu, Abuja */}
+                    Gudu District, Abuja, Nigeria
                   </p>
                 </div>
               </div>
@@ -111,13 +115,16 @@ const Navbar = () => {
                   className="absolute left-6 flex flex-col items-center gap-2 px-1 md:w-[20%]"
                 >
                   <div className="absolute top-3 inset-x-5 bg-primary-600/20 h-10 w-[80%] " />
-                  <Link to='/' className="flex items-center justify-center leading-4 px-1 border-2 border-primary-500 text-primary-500 font-bold text-lg">
+                  <Link
+                    to="/"
+                    className="flex items-center justify-center leading-4 px-1 border-2 border-primary-500 text-primary-500 font-bold text-lg"
+                  >
                     AC<span className="text-sm">&</span>D
                   </Link>
                   <div className="text-center">
-                    <h2 className="text-base md:text-xs font-black md:font-semibold tracking-wide">
+                    <p className="text-base md:text-xs font-black md:font-semibold tracking-wide">
                       ABDULKARIM
-                    </h2>
+                    </p>
                     <p className="font-bold md:font-normal  text-primary-500 text-xs">
                       CEILING AND DECOR & CO
                     </p>
@@ -148,7 +155,8 @@ const Navbar = () => {
 
               <div className="hidden md:flex items-center gap-4 md:gap-2 text-text-400">
                 <a
-                  href="https://facebook.com/yourpage"
+                  href="https://facebook.com/abdulkarim.adamu.9655806"
+                  aria-label="Follow AC&D on Facebook"
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Facebook"
@@ -158,6 +166,7 @@ const Navbar = () => {
                 </a>
                 <a
                   href="https://wa.me/2348035843896"
+                  aria-label="Contact AC&D on WhatsApp"
                   target="_blank"
                   rel="noopener noreferrer"
                   title="WhatsApp"
@@ -166,7 +175,8 @@ const Navbar = () => {
                   <WhatsappLogo size={24} weight="fill" />
                 </a>
                 <a
-                  href="https://instagram.com/yourprofile"
+                  href="https://instagram.com/youngslandy7/"
+                  aria-label="Follow AC&D on Instagram"
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Instagram"

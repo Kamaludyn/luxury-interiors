@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AuthProvider } from "./shared/context/AuthContext";
+import { HelmetProvider } from "react-helmet-async";
 import RootLayout from "./site/layouts/RootLayout";
 import AdminLayout from "./admin/layouts/AdminLayout";
 import Login from "./admin/pages/Login";
@@ -91,9 +92,11 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <AuthProvider>
-      <RouterProvider router={router} />
-    </AuthProvider>
+    <HelmetProvider>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </HelmetProvider>
   );
 };
 

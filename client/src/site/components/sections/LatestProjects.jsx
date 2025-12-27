@@ -29,7 +29,9 @@ const LatestProjects = () => {
             Latest Projects
           </h2>
           <p className="text-text-400 dark:text-text-700/70 max-w-2xl mx-auto leading-relaxed">
-            A glimpse into our most recent transformations in various parts of Abuja including Gwarinpa, Lokogoma, Wuse, Lugbe, and Maitama. where craftsmanship, artistry, and innovation converge.
+            A glimpse into our most recent transformations in various parts of
+            Abuja including Gwarinpa, Lokogoma, Wuse, Lugbe, and Maitama. where
+            craftsmanship, artistry, and innovation converge.
           </p>
         </motion.div>
 
@@ -38,39 +40,44 @@ const LatestProjects = () => {
         ) : (
           <div className="grid md:grid-cols-3 gap-8">
             {projects?.map((project, index) => (
-              <motion.div
+              <motion.article
                 key={project?._id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 viewport={{ once: true }}
-                onClick={() =>
-                  navigate(`/projects/${project._id}`, { state: { project } })
-                }
                 className="relative group overflow-hidden rounded-2xl cursor-pointer shadow-lg hover:shadow-xl transition-all duration-500"
               >
-                <motion.img
-                  src={project?.posterImage.secureUrl}
-                  alt={project?.title}
-                  className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                  whileHover={{ scale: 1.05 }}
-                />
-
-                {/* Overlay */}
-                <div className="absolute inset-4 bg-primary-500/80 opacity-50 group-hover:opacity-0 transition-opacity duration-500 rounded-lg" />
-
-                {/* Text Overlay */}
-                <div className="flex flex-col justify-between absolute top-6 bottom-6 left-6 right-6 p-2 translate-y-0 group-hover:translate-y-4 transition-all duration-500">
-                  <h3 className="text-surface-500 text-2xl font-semibold opacity-100 group-hover:opacity-0 ">
-                    {project?.title}
-                  </h3>
-                  <ArrowCircleRight
-                    size={32}
-                    weight="bold"
-                    className="mt-auto ml-auto text-surface-500 group-hover:shadow-lg"
+                <Link
+                  to={`/projects/${project._id}`}
+                  state={{ project }}
+                  className="block w-full h-full"
+                >
+                  <motion.img
+                    src={project?.posterImage.secureUrl}
+                    alt={`${project?.title} - Modern interior project in ${
+                      project?.location || "Abuja"
+                    }`}
+                    className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                    whileHover={{ scale: 1.05 }}
+                    loading="lazy"
                   />
-                </div>
-              </motion.div>
+
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-primary-500/80 opacity-50 group-hover:opacity-0 transition-opacity duration-500" />
+
+                  <div className="flex flex-col justify-between absolute inset-6 p-2 group-hover:translate-y-4 transition-all duration-500">
+                    <h3 className="text-surface-500 text-2xl font-semibold opacity-100 group-hover:opacity-0 ">
+                      {project?.title}
+                    </h3>
+                    <ArrowCircleRight
+                      size={32}
+                      weight="bold"
+                      className="mt-auto ml-auto text-surface-500 group-hover:shadow-lg"
+                    />
+                  </div>
+                </Link>
+              </motion.article>
             ))}
           </div>
         )}

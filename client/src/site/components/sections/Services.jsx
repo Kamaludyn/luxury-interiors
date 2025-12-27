@@ -23,8 +23,12 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="relative py-24 pb-24 md:pb-8 bg-surface-500 text-text-500 dark:text-text-700 overflow-visible">
+    <section
+      aria-labelledby="services-heading"
+      className="relative py-24 pb-24 md:pb-8 bg-surface-500 text-text-500 dark:text-text-700 overflow-visible"
+    >
       <svg
+        aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 200"
         className="h-16 absolute -top-16 sm:h-20 sm:-top-20 md:h-24 md:-top-24 lg:h-28 lg:-top-28 left-0 w-full z-30"
@@ -43,9 +47,13 @@ export default function ServicesSection() {
         />
       </svg>
       <div className="relative -mt-40 md:-mt-52 z-40 container mx-auto md:pb-4 px-6 md:px-12 lg:px-20">
+        {/* 'sr-only' class makes the h2 hidden but seen by search engines. */}
+        <h2 id="services-heading" className="sr-only">
+          Our Professional Interior Finishing Services in Abuja
+        </h2>
         <div className="grid md:grid-cols-3 gap-4 md:gap-10">
           {services.map((service, index) => (
-            <motion.div
+            <motion.article
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -66,11 +74,12 @@ export default function ServicesSection() {
               </p>
               <button
                 onClick={() => navigate("/services")}
+                aria-label={`Read more about ${service.title}`}
                 className="text-primary-600 dark:text-text-700/70 leading-relaxed mt-2 md:mt-4 p-2 text-center group-hover:bg-primary-600 group-hover:text-surface-500 group-hover:rounded-md transition-all duration-300 cursor-pointer"
               >
                 Read more
               </button>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import { UsersThree, Timer, Medal} from "phosphor-react";
+import { UsersThree, Timer, Medal } from "phosphor-react";
 
 const AboutUs = () => {
   return (
-    <section className="relative w-full py-16 bg-background-500 text-text-500 overflow-hidden">
+    <section
+      aria-labelledby="about-heading"
+      className="relative w-full py-16 bg-background-500 text-text-500 overflow-hidden"
+    >
       <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -16,29 +19,37 @@ const AboutUs = () => {
             Professional Ceiling & Interior Decoration Experts in Abuja
           </h2>
           <p className="text-text-400 leading-relaxed">
-            We are a trusted ceiling and interior decoration company based in Abuja, offering Gypsum ceilings, gypsum board installations, Tv design, wall paneling, partitions, shelving, and complete interior finishing. With years of experience and a strong reputation for quality, we deliver durable craftsmanship, clean finishing, and timely project completion for homes, offices, hotels, and real estate projects across Abuja.
+            We are a trusted ceiling and interior decoration company based in
+            Abuja, offering Gypsum ceilings, gypsum board installations, Tv
+            design, wall paneling, partitions, shelving, and complete interior
+            finishing. With years of experience and a strong reputation for
+            quality, we deliver durable craftsmanship, clean finishing, and
+            timely project completion for homes, offices, hotels, and real
+            estate projects across Abuja.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-4 md:gap-8 text-center">
           {[
             {
-              icon: <Medal size={40} className="mx-auto" />,
+              icon: <Medal size={40} className="mx-auto" aria-hidden="true" />,
               title: "Quality Craftsmanship",
               desc: "We use the best POP and gypsum materials to deliver long-lasting, premium finishes.",
             },
             {
-              icon: <UsersThree size={40} className="mx-auto" />,
+              icon: (
+                <UsersThree size={40} className="mx-auto" aria-hidden="true" />
+              ),
               title: "Experienced Team",
               desc: "Skilled artisans with years of experience in residential and commercial interior projects in Abuja.",
             },
             {
-              icon: <Timer  size={40} className="mx-auto" />,
+              icon: <Timer size={40} className="mx-auto" aria-hidden="true" />,
               title: "Timely Delivery",
               desc: "We design experiences that feel effortless, timeless yet deeply personal and we ensure every project is completed on schedule",
             },
           ].map((card, i) => (
-            <motion.div
+            <motion.article
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +60,7 @@ const AboutUs = () => {
               <div className="mb-6">{card.icon}</div>
               <h3 className="text-xl font-semibold mb-3">{card.title}</h3>
               <p className="text-text-400/ leading-relaxed">{card.desc}</p>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>
