@@ -61,7 +61,7 @@ const Navbar = () => {
             <List size={32} color="#ffffff" weight="bold" />
           </div>
 
-          <div className="hidden w-[75%] md:flex flex-col justify-end">
+          <div className="hidden w-[73%] md:flex flex-col justify-end">
             {/* Contact Info */}
             <div className="hidden w-full md:flex items-center justify-end gap-10 pb-4 mb-4 border-b border-primary-500/40">
               <div className="flex items-center gap-3 group cursor-pointer">
@@ -111,24 +111,10 @@ const Navbar = () => {
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4 }}
+                  transition={{ duration: 0.2 }}
                   className="absolute left-6 flex flex-col items-center gap-2 px-1 md:w-[20%]"
                 >
-                  <div className="absolute top-3 inset-x-5 bg-primary-600/20 h-10 w-[80%] " />
-                  <Link
-                    to="/"
-                    className="flex items-center justify-center leading-4 px-1 border-2 border-primary-500 text-primary-500 font-bold text-lg"
-                  >
-                    AC<span className="text-sm">&</span>D
-                  </Link>
-                  <div className="text-center">
-                    <p className="text-base md:text-xs font-black md:font-semibold tracking-wide">
-                      ABDULKARIM
-                    </p>
-                    <p className="font-bold md:font-normal  text-primary-500 text-xs">
-                      CEILING AND DECOR & CO
-                    </p>
-                  </div>
+                  <Logo />
                 </motion.div>
               )}
               <ul className="flex items-center gap-6 text-sm">

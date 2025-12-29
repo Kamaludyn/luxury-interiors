@@ -1,22 +1,29 @@
 import { Link } from "react-router-dom";
+import logoImg from "../../../assets/imgs/logo.PNG";
 
 const Logo = () => {
   return (
     <Link
-    to='/'
-      className="relative flex flex-col items-center justify-center gap-1 md:px-1 md:w-[20%]"
+      to="/"
+      className="flex items-center gap-3 group transition-opacity hover:opacity-90"
+      aria-label="AC&D - AbdulKarim Ceiling and Decor Home"
     >
-      <div className="absolute top-3.5 md:top-3 -inset-1.5 md:inset-x-5 bg-primary-600/20 h-7 md:h-10 md:w-[80%]" />
-      <div className="flex items-center justify-center leading-8 md:leading-4 px-2 md:px-1 border-2 border-primary-500 text-primary-500 font-bold text-2xl md:text-lg">
-        AC<span className="text-sm">&</span>D
-      </div>
-      <div className="hidden md:block text-center">
-        <h2 className="text-xs font-bold md:font-semibold tracking-wide">
+      <img
+        src={logoImg}
+        alt="AC&D Logo"
+        className="h-14 md:h-16 w-auto object-contain"
+        fetchPriority="high"
+      />
+      <div className="flex flex-col justify-center border-l border-primary-500/30 pl-3 md:mt-2">
+        <h1 className="text-sm font-black leading-none text-[#1B263B] tracking-tight">
           ABDULKARIM
-        </h2>
-        <p className="text-primary-500 text-xs">CEILING AND DECOR & CO</p>
+        </h1>
+        <p className="text-[12px] md:text-[10px] font-bold text-primary-500 leading-tight">
+          CEILING AND DECOR & CO
+        </p>
       </div>
     </Link>
   );
 };
+
 export default Logo;
