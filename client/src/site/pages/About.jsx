@@ -1,13 +1,13 @@
-import HelmetSEO from "../components/seo/HelmetSEO";
 import { motion } from "framer-motion";
 import { MapPin } from "phosphor-react";
 import gypsum from "../../assets/imgs/modern-gypsum.jpg";
 import Header from "../components/ui/Header";
+import SEOHead from "../components/seo/SEOHead";
 
 const About = () => {
   return (
     <>
-      <HelmetSEO
+      <SEOHead
         title="About Us"
         description="Learn more about Abdulkarim Ceiling and Decor, the best interior finishing experts in Abuja. Specializing in premium POP ceilings, gypsum installations, and modern TV wall designs across Nigeria."
         path="/about-us"

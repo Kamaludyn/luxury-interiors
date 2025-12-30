@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
-import HelmetSEO from "../components/seo/HelmetSEO";
+import SEOHead from "../components/seo/SEOHead";
+import ProjectDetailSchema from "../components/seo/ProjectDetailsSchema";
 import { motion } from "framer-motion";
 import ProjectDetailsPlaceholder from "../components/ui/ProjectDetailsPlaceholder";
 import api from "../../shared/services/api";
@@ -9,14 +10,14 @@ import Header from "../components/ui/Header";
 const ProjectDetails = () => {
   const [project, setProject] = useState();
   const [isLoading, setIsLoading] = useState(false);
-  const { id } = useParams();
+  const { slug } = useParams();
   const location = useLocation();
 
   useEffect(() => {
     // Fetch project details
     const fetchProject = async () => {
       setIsLoading(true);
-      const res = await api.get(`/projects/${id}`);
+      const res = await api.get(`/projects/${slug}`);
       setProject(res.data.project);
       setIsLoading(false);
     };
@@ -33,13 +34,14 @@ const ProjectDetails = () => {
     <ProjectDetailsPlaceholder />
   ) : (
     <>
-      <HelmetSEO
+      <SEOHead
         title={`${project?.title || "Project Details"}`}
         description={`View details of our ${project?.title} completed in ${
           project?.location || "Abuja"
         }. Specialized interior finishing including gypsum ceilings and POP screeding by AC&D Nigeria.`}
-        path={`/projects/${id}`}
+        path={`/projects/${project?.slug}`}
       />
+      <ProjectDetailSchema project={project} />
       <main className="relative w-full bg-surface-500 dark:bg-background-800 text-text-500 dark:text-text-700 overflow-hidden">
         <Header title={project?.title} />
         <section className="container h-full mx-auto px-6 py-8 md:py-10 md:px-12 lg:px-20 relative z-10 grid grid-cols-1 md:grid-cols-10 grid-flow-row gap-4 md:gap-6">

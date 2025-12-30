@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import HelmetSEO from "../components/seo/HelmetSEO";
+import SEOHead from "../components/seo/SEOHead";
+import ProjectsSchema from "../components/seo/ProjectsSchema";
 import { ArrowRight, ArrowLeft, ArrowCircleRight } from "phosphor-react";
 import { useProjects } from "../../shared/hooks/useProjects";
 import ProjectsPlaceholder from "../components/ui/ProjectsPlaceholder";
@@ -22,11 +23,12 @@ const Projects = () => {
   };
   return (
     <>
-      <HelmetSEO
+      <SEOHead
         title="Our Interior Design Projects in Abuja and across Nigeria"
         description="Explore AC&D's portfolio of completed interior design projects in Abuja, including gypsum ceilings, drywall partitions, POP wall screeding, TV wall designs, bathroom interiors, custom shelves, and professional painting for residential and commercial spaces."
         path="/projects"
       />
+      <ProjectsSchema projects={projects} />
       <main className="relative w-full bg-surface-500 dark:bg-background-800 text-text-500 dark:text-text-700 overflow-hidden">
         <Header title={"Our Projects"} />
         <section className="container mx-auto px-6 py-8 md:py-10 md:px-12 lg:px-20 relative z-10">
@@ -42,7 +44,7 @@ const Projects = () => {
             <ProjectsPlaceholder projectsNumber={4} isGrid4 />
           ) : (
             <div className="grid md:grid-cols-4 gap-8">
-              {projects.map((project, index) => (
+              {projects.map((project) => (
                 <motion.article
                   key={project._id}
                   initial={{ opacity: 0, y: 30 }}
@@ -53,7 +55,7 @@ const Projects = () => {
                   aria-label={`Project: ${project.title}`}
                 >
                   <Link
-                    to={`/projects/${project._id}`}
+                    to={`/projects/${project.slug}`}
                     state={{ project }}
                     className="block w-full h-full"
                   >

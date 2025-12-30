@@ -1,10 +1,10 @@
-import HelmetSEO from "../components/seo/HelmetSEO.jsx";
+import SEOHead from "../components/seo/SEOHead.jsx";
 import { EnvelopeSimple, Phone, MapPin } from "phosphor-react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import Header from "../components/ui/Header";
 
-// Custom marker icon (Leaflet breaks without this)
+// Custom marker icon
 const markerIcon = new L.Icon({
   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
   iconRetinaUrl:
@@ -19,7 +19,7 @@ const position = [9.0091514, 7.4767806]; // Gudu Abuja coordinates
 const Contact = () => {
   return (
     <>
-      <HelmetSEO
+      <SEOHead
         title="Get a Free Quote"
         description="Contact Abdulkarim Ceiling and Decor for High-end interior finishing services in Abuja. Request your free quotes for gypsum ceilings, POP wall screeding, TV wall designs, and more."
         path="/contact-us"

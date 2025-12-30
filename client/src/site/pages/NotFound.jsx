@@ -1,12 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
-import HelmetSEO from "../components/seo/HelmetSEO.jsx";
+import SEOHead from "../components/seo/SEOHead.jsx";
 
 export default function NotFound() {
   const navigate = useNavigate();
 
   return (
     <>
-      <HelmetSEO
+      <SEOHead
         title="Page Not Found"
         description="The page you are looking for does not exist on AC&D Abuja."
         path="/*"

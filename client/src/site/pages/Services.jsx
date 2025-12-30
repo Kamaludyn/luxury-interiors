@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import HelmetSEO from "../components/seo/HelmetSEO";
+import SEOHead from "../components/seo/SEOHead";
+import ServicesSchema from "../components/seo/ServiceSchema";
 import partitionWall from "../../assets/imgs/office-partition.jpg";
 import gypsum from "../../assets/imgs/modern-gypsum.jpg";
 import interior from "../../assets/imgs/prjts1.PNG";
@@ -53,11 +54,12 @@ const Services = () => {
 
   return (
     <>
-      <HelmetSEO
+      <SEOHead
         title="Interior Design & POP Ceiling Services"
         description="Professional Gypsum ceiling, POP wall screeding, and TV wall design in Abuja. Quality interior finishing for homes and offices across Nigeria."
         path="/services"
       />
+      <ServicesSchema />
       <main className="relative w-full bg-surface-500 dark:bg-background-800 text-text-500 dark:text-text-700 overflow-hidden">
         <Header title={"Our Services"} />
         <div className="container mx-auto px-6 py-8 md:py-10 md:px-12 lg:px-20 relative z-10">

@@ -1,18 +1,10 @@
 import { Folders, User, GearSix } from "phosphor-react";
 import PageHeader from "../components/PageHeader";
 import { useProjectsCount } from "../../shared/hooks/useProjects";
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const { data: projectsCount } = useProjectsCount();
-  useEffect(() => {
-    setTimeout(() => {
-      console.log("pCount:", projectsCount);
-    }, 2000);
-    console.log("pNumber:");
-  }, []);
-
   return (
     <div className="space-y-6">
       <PageHeader title="Dashboard" />
