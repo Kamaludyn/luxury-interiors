@@ -1,6 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AuthProvider } from "./shared/context/AuthContext";
-import { HelmetProvider } from "react-helmet-async";
 import RootLayout from "./site/layouts/RootLayout";
 import AdminLayout from "./admin/layouts/AdminLayout";
 import Login from "./admin/pages/Login";
@@ -36,7 +35,7 @@ const router = createBrowserRouter([
         element: <Projects />,
       },
       {
-        path: "/projects/:id",
+        path: "/projects/:slug",
         element: <ProjectDetails />,
       },
       {
@@ -92,11 +91,9 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <HelmetProvider>
       <AuthProvider>
         <RouterProvider router={router} />
       </AuthProvider>
-    </HelmetProvider>
   );
 };
 
