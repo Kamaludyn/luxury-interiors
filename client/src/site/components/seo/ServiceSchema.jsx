@@ -1,5 +1,3 @@
-import { Helmet } from "react-helmet-async";
-
 const ServicesSchema = () => {
   const services = [
     {
