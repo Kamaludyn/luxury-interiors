@@ -14,7 +14,7 @@ router.get("/count", projectController.getProjectsCount);
 router.get("/", projectController.getAllProjects);
 
 // @route  GET /api/projects/:id
-router.get("/:projectId", projectController.getProjectById);
+router.get("/:projectSlug", projectController.getProjectBySlug);
 
 // *** Private Routes *** //
 router.use(verify);

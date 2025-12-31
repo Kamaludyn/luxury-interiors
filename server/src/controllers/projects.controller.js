@@ -116,11 +116,11 @@ const getAllProjects = asyncHandler(async (req, res) => {
 // @desc    Fetch project
 // @route   GET /api/projects/:projectId
 // @access  Private
-const getProjectById = asyncHandler(async (req, res) => {
-  const { projectId } = req.params;
+const getProjectBySlug = asyncHandler(async (req, res) => {
+  const { projectSlug } = req.params;
 
   // Fetch project by id
-  const project = await Project.findById(projectId);
+  const project = await Project.findOne({ projectSlug });
 
   // Return error if project not found
   if (!project)
@@ -265,7 +265,7 @@ const deleteProject = asyncHandler(async (req, res) => {
 const projectController = {
   addProject,
   getAllProjects,
-  getProjectById,
+  getProjectBySlug,
   updateProject,
   getProjectsCount,
   deleteProject,
