@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SEOHead from "../components/seo/SEOHead";
 import ProjectsSchema from "../components/seo/ProjectsSchema";
@@ -9,7 +9,6 @@ import ProjectsPlaceholder from "../components/ui/ProjectsPlaceholder";
 import Header from "../components/ui/Header";
 
 const Projects = () => {
-  const navigate = useNavigate();
   const [page, setPage] = useState(1);
   const limit = 8;
 
@@ -72,7 +71,7 @@ const Projects = () => {
 
                     {/* Text Overlay */}
                     <div className="flex flex-col justify-between absolute inset-6 p-2 group-hover:translate-y-4 transition-all duration-500">
-                      <h3 className="text-surface-500 text-2xl font-semibold opacity-100 group-hover:opacity-0 ">
+                      <h3 className="text-surface-500 text-xl font-semibold opacity-100 group-hover:opacity-0 line-clamp-2">
                         {project.title}
                       </h3>
                       <ArrowCircleRight

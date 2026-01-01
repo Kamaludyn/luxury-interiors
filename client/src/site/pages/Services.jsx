@@ -1,9 +1,13 @@
 import { motion } from "framer-motion";
 import SEOHead from "../components/seo/SEOHead";
 import ServicesSchema from "../components/seo/ServiceSchema";
-import partitionWall from "../../assets/imgs/office-partition.jpg";
-import gypsum from "../../assets/imgs/modern-gypsum.jpg";
-import interior from "../../assets/imgs/prjts1.PNG";
+import bathroomDesign from "../../assets/imgs/bathroom-design.webp";
+import drywallPartition from "../../assets/imgs/drywall-partition-service-ac&d-abuja.webp";
+import paintingService from "../../assets/imgs/painting-service.webp";
+import wallScreeding from "../../assets/imgs/wall-screeding-ac&d-abuja.webp";
+import gypsumCeiling from "../../assets/imgs/modern-gypsum.webp";
+import tvWallDesign from "../../assets/imgs/modern-tv-wall-design.webp";
+import customShelves from "../../assets/imgs/custom-shelves-and-wall-units-ac&d-abuja.webp";
 import Header from "../components/ui/Header";
 
 const Services = () => {
@@ -12,43 +16,43 @@ const Services = () => {
       id: 1,
       title: "Gypsum Ceiling Installation",
       desc: "Modern and durable gypsum ceilings for homes, offices, and commercial spaces in Abuja. Clean finishing with lighting integrations.",
-      image: gypsum,
+      image: gypsumCeiling,
     },
     {
       id: 2,
       title: "Custom Shelves & Wall Units",
       desc: "Well-crafted floating shelves, wall units, and storage solutions designed to fit perfectly into your interior space.",
-      image: interior,
+      image: customShelves,
     },
     {
       id: 3,
       title: "Bathroom Interior Design",
       desc: "Beautiful bathroom designs including wall panels, tiling, vanities, and waterproof finishing for luxury modern bathrooms.",
-      image: partitionWall,
+      image: bathroomDesign,
     },
     {
       id: 4,
       title: "Modern TV Wall Design",
       desc: "Stylish TV walls with 3D panels, floating consoles, LED lighting, and cable concealment for a clean modern look.",
-      image: gypsum,
+      image: tvWallDesign,
     },
     {
       id: 5,
       title: "Drywall Partition Installation",
       desc: "Strong, clean, and professional drywall partitions for homes, offices, and commercial buildings in Abuja.",
-      image: partitionWall,
+      image: drywallPartition,
     },
     {
       id: 6,
       title: "POP Wall Screeding",
       desc: "Smooth, flawless POP wall screeding for painting, renovation, and interior finishing perfect for modern Abuja homes.",
-      image: interior,
+      image: wallScreeding,
     },
     {
       id: 7,
       title: "Professional Painting Services",
       desc: "High-quality wall painting with premium materials and neat finishing for residential and commercial projects in Abuja.",
-      image: gypsum,
+      image: paintingService,
     },
   ];
 

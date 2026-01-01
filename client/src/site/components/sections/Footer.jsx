@@ -95,9 +95,6 @@ const Footer = () => {
             </div>
 
             <div>
-              {/* <h4 className="cormorantFont text-surface-500 text-lg font-medium mb-4 border-b border-surface-500/30">
-                Get In Touch
-              </h4> */}
               <h4 className="text-surface-500 text-lg font-medium mb-3 ">
                 <span className="cormorantFont pb-1 border-b border-surface-500/50">
                   Get In Touch
@@ -167,7 +164,7 @@ const Footer = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.2 }}
             viewport={{ once: true }}
             className="flex flex-col md:flex-row justify-between items-center text-xs md:text-sm uppercase tracking-widest opacity-70"
           >
