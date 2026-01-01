@@ -42,7 +42,7 @@ export const sitemap = asyncHandler(async (req, res) => {
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${urls}
-  </urlset>`;
+  </urlset>`.trim();
 
   // Set response headers and send the sitemap
   res.header("Content-Type", "application/xml");
