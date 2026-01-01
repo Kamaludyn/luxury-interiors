@@ -25,7 +25,7 @@ const Footer = () => {
           >
             <div className="space-y-4">
               <h3 className="text-xl md:text-2xl text-surface-500 font-['Cormorant_Garamond'] font-semibold">
-                AbdulKarim Ceiling and Decor & Co.
+                AbdulKarim Ceiling and Decor
               </h3>
               <p className="leading-relaxed max-w-sm">
                 The leading interior finishing experts in Abuja. We specialize
@@ -95,9 +95,6 @@ const Footer = () => {
             </div>
 
             <div>
-              {/* <h4 className="cormorantFont text-surface-500 text-lg font-medium mb-4 border-b border-surface-500/30">
-                Get In Touch
-              </h4> */}
               <h4 className="text-surface-500 text-lg font-medium mb-3 ">
                 <span className="cormorantFont pb-1 border-b border-surface-500/50">
                   Get In Touch
@@ -172,8 +169,8 @@ const Footer = () => {
             className="flex flex-col md:flex-row justify-between items-center text-xs md:text-sm uppercase tracking-widest opacity-70"
           >
             <p className="text-center">
-              © {new Date().getFullYear()} ABDULKARIM CEILING AND DECOR & CO.
-              All Rights Reserved.
+              © {new Date().getFullYear()} ABDULKARIM CEILING AND DECOR. All
+              Rights Reserved.
             </p>
           </motion.div>
         </div>
