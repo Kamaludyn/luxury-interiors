@@ -9,9 +9,9 @@ const StartProjectCTA = () => {
     <section className="relative w-full py-10 bg-primary-600">
       <div className="container mx-auto relative flex flex-col md:flex-row justify-center items-center gap-6 px-6 md:px-12">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
           className="relative w-full md:w-[70%] text-center md:text-left space-y-2 z-10"
         >

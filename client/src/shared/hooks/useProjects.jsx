@@ -29,7 +29,6 @@ export const useProjectsForm = () => {
 
   const submitForm = async ({ projectId, form }) => {
     const fmdt = Object.fromEntries(form);
-    console.log("fmt:", fmdt);
     if (projectId) {
       // Update Project
       const res = await api.patch(`/projects/${projectId}`, form, {

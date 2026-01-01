@@ -1,32 +1,30 @@
-import { useState, useEffect, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useState, useEffect } from "react";
 import { CaretLeft, CaretRight } from "phosphor-react";
-import hero1 from "../../../assets/imgs/hero.jpg";
-import hero2 from "../../../assets/imgs/hero-shelves.jpg";
-import hero3 from "../../../assets/imgs/drywall-partition.jpeg";
+import tvWallDesign from "../../../assets/imgs/tv-hero-ac&d.webp";
+import customShelves from "../../../assets/imgs/custom-shelves-hero-ac&d-abuja.webp";
+import drywall from "../../../assets/imgs/drywall-partition.webp";
 
 const heroImages = [
   {
     title: "High-end POP Ceilings & Interior Decoration Services in Abuja",
     subTitle: "Transforming spaces with elegance and comfort.",
-    image: hero1,
+    image: tvWallDesign,
   },
   {
     title: "Expert Gypsum Ceilings, Shelves & Wall Partitions",
     subTitle: "Your vision, beautifully brought to life.",
-    image: hero2,
+    image: customShelves,
   },
   {
     title: "Complete Interior Finishing & Painting Solutions",
     subTitle:
       "We elevate your living and working spaces with top-notch craftsmanship.",
-    image: hero3,
+    image: drywall,
   },
 ];
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const ref = useRef(null);
 
   // Go to the next hero image in the carousel
   const handleNext = () => {
@@ -49,23 +47,17 @@ const Hero = () => {
     };
   }, [currentIndex]);
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-
   return (
-    <section
-      ref={ref}
-      className="relative group min-h-screen py-24 flex items-center justify-center overflow-hidden bg-background-500 text-text-500"
-    >
-      <motion.div style={{ y }} className="absolute inset-0 z-0">
+    <section className="relative group min-h-screen py-24 flex items-center justify-center overflow-hidden bg-background-500 text-text-500">
+      <div className="absolute inset-0 z-0">
         <img
           src={heroImages[currentIndex].image}
           alt={`${heroImages[currentIndex].title} - AC&D Abuja`}
           className="w-full h-full object-cover opacity-90"
           fetchPriority="high"
+          loading="eager"
+          width="1600"
+          height="900"
         />
 
         <div className="flex justify-between w-[95%] absolute top-[40%] left-[2.5%] md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -85,9 +77,9 @@ const Hero = () => {
           </button>
         </div>
         <div className="absolute inset-0 bg-linear-to from-black/40 to-transparent"></div>
-      </motion.div>
+      </div>
 
-      <motion.div
+      <div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         key={currentIndex}
@@ -100,7 +92,7 @@ const Hero = () => {
         <p className="bg-surface-500 pt-4 pb-2 px-4 -mt-2 text-base md:text-xl text-primary-500 max-w-2xl mx-auto rounded-4xl leading-relaxed">
           {heroImages[currentIndex].subTitle}
         </p>
-      </motion.div>
+      </div>
     </section>
   );
 };
