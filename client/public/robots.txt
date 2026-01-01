@@ -1,0 +1,11 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Block admin and dashboard pages from showing up in Google Search
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /reset-password/
+
+# Link sitemap so Google finds it immediately
+Sitemap: https://acandd.onrender.com/sitemap
