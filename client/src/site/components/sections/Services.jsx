@@ -55,9 +55,9 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <motion.article
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.2 }}
               viewport={{ once: true }}
               className={`flex flex-col place-items-center p-8 transition-all duration-300 hover:-translate-y-7 group ${
                 index === 1 ? "md:translate-y-8 hover:translate-y-2" : ""

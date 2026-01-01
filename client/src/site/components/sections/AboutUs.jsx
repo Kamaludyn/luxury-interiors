@@ -51,9 +51,9 @@ const AboutUs = () => {
           ].map((card, i) => (
             <motion.article
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.2, }}
               viewport={{ once: true }}
               className="p-8 rounded-2xl bg-surface-500 shadow-sm hover:shadow-lg transition-shadow duration-300"
             >

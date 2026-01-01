@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin } from "phosphor-react";
-import gypsum from "../../assets/imgs/modern-gypsum.jpg";
+import gypsum from "../../assets/imgs/modern-gypsum.webp";
 import Header from "../components/ui/Header";
 import SEOHead from "../components/seo/SEOHead";
 

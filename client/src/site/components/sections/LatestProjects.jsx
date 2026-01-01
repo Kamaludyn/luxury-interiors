@@ -42,14 +42,14 @@ const LatestProjects = () => {
             {projects?.map((project, index) => (
               <motion.article
                 key={project?._id}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
+                transition={{ duration: 0.2 }}
                 viewport={{ once: true }}
                 className="relative group overflow-hidden rounded-2xl cursor-pointer shadow-lg hover:shadow-xl transition-all duration-500"
               >
                 <Link
-                  to={`/projects/${project._id}`}
+                  to={`/projects/${project.slug}`}
                   state={{ project }}
                   className="block w-full h-full"
                 >

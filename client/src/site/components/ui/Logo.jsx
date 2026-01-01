@@ -18,8 +18,8 @@ const Logo = () => {
         <h1 className="text-sm font-black leading-none text-[#1B263B] tracking-tight">
           ABDULKARIM
         </h1>
-        <p className="text-[12px] md:text-[10px] font-bold text-primary-500 leading-tight">
-          CEILING AND DECOR & CO
+        <p className="text-[12px] md:text-[10px] font-bold text-primary-500 leading-tight tracking-widest">
+          CEILING AND DECOR
         </p>
       </div>
     </Link>
