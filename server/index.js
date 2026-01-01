@@ -8,6 +8,7 @@ import connectDb from "./src/config/dbConnection.js";
 import errorHandler from "./src/middleware/error.js";
 import authRoutes from "./src/routes/auth.routes.js";
 import projectsRoutes from "./src/routes/projects.routes.js";
+import sitemapRoutes from "./src/routes/sitemap.routes.js";
 
 // Initialize Express app
 const app = express();
@@ -46,6 +47,7 @@ if (process.env.NODE_ENV === "production") {
 // API Routes
 app.use("/api/projects", projectsRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/", sitemapRoutes);
 
 // Handle undefined routes
 app.use((req, res) => {
