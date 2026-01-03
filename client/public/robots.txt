@@ -8,4 +8,4 @@ Disallow: /login/
 Disallow: /reset-password/
 
 # Link sitemap so Google finds it immediately
-Sitemap: https://acandd.onrender.com/sitemap.xml
+Sitemap: https://abdulkarimceilinganddecor.com/sitemap.xml
