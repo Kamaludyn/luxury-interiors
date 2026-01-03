@@ -104,10 +104,10 @@ const Footer = () => {
                 <li className="flex gap-2">
                   <Envelope size={18} />
                   <a
-                    href="mailto:abdulkarimceilinganddecor@gmail.com"
+                    href="mailto:abdulkarimceilingsanddecor@gmail.com"
                     className="hover:underline break-all"
                   >
-                    abdulkarimceilinganddecor@gmail.com
+                    abdulkarimceilingsanddecor@gmail.com
                   </a>
                 </li>
                 <li className="flex items-center gap-2">

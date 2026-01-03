@@ -40,10 +40,10 @@ const Contact = () => {
                   Email
                 </p>
                 <span
-                  href="mailto:abdulkarimceilinganddecor@gmail.com"
+                  href="mailto:abdulkarimceilingsanddecor@gmail.com"
                   className="text-primary-500/60 word-break: break-all"
                 >
-                  abdulkarimceilinganddecor@gmail.com
+                  abdulkarimceilingsanddecor@gmail.com
                 </span>
               </div>
             </a>
